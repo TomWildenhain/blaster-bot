@@ -1,0 +1,58 @@
+﻿<Window x:Class="BlasterBot.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BlasterBot"
+        mc:Ignorable="d"
+        Title="BlasterBot" Height="350" Width="525">
+    <Grid>
+        <DockPanel>
+            <TextBlock DockPanel.Dock="Top">Point at upper left and press 1.  Point at bottom right  and press 2.</TextBlock>
+            <TextBlock DockPanel.Dock="Top" Name="TBtopLeft">Top left: [unassigned]</TextBlock>
+            <TextBlock DockPanel.Dock="Top" Name="TBbottomRight">Bottom right: [unassigned]</TextBlock>
+            <TextBlock DockPanel.Dock="Top">Delay time:</TextBlock>
+            <TextBox DockPanel.Dock="Top" Width="100px" HorizontalAlignment="Left" Name="TBXdelayTime">10</TextBox>
+            <StackPanel DockPanel.Dock="Top" HorizontalAlignment="Left" Orientation="Horizontal">
+                <Button Width="100px" Click="Classic_Click" >Classic</Button>
+                <Button Width="100px" Click="Lightning_Click" >Lightning</Button>
+                <Button Width="100px" Click="Zen_Click" >Zen</Button>
+            </StackPanel>
+            <StackPanel DockPanel.Dock="Top" HorizontalAlignment="Left" Orientation="Horizontal">
+                <Button Width="100px" Click="IceStorm_Click" >Ice Storm</Button>
+                <Button Width="100px" Click="DiamondMine_Click" >Diamond Mine</Button>
+                <Button Width="100px" Click="Butterflies_Click" >Butterflies</Button>
+                <Button Width="100px" Click="Poker_Click" >Poker</Button>
+            </StackPanel>
+            <Button DockPanel.Dock="Top" Width="100px" HorizontalAlignment="Left" Click="ReadScreen_Click">Read Screen</Button>
+            <Button DockPanel.Dock="Top" Width="100px" HorizontalAlignment="Left" Click="MakeMove_Click">Make Move</Button>
+
+
+            <Button DockPanel.Dock="Top" Width="100px" HorizontalAlignment="Left" Click="Begin_Click" Name="BNbegin">Begin</Button>
+            <Border BorderBrush="Black" BorderThickness="1" MinWidth="{Binding ActualHeight, RelativeSource={RelativeSource Self}}" SnapsToDevicePixels="True" Width="0">
+                <Grid Name="colorGrid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                </Grid>
+            </Border>
+        </DockPanel>
+    </Grid>
+</Window>
